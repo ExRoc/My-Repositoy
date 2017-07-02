@@ -26,6 +26,7 @@ public:
     BigInteger(const char *n);
     BigInteger(const BigInteger &n);
 
+    const BigInteger& operator=(int n);
     const BigInteger& operator=(long long n);
     const BigInteger& operator=(const char *n);
     const BigInteger& operator=(const BigInteger &n);
