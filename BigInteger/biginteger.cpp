@@ -36,6 +36,11 @@ BigInteger::BigInteger(const BigInteger &n) {
     *this = n;
 }
 
+const BigInteger& BigInteger::operator=(int n) {
+    *this = (long long)n;
+    return *this;
+}
+
 const BigInteger& BigInteger::operator=(long long n) {
     num.clear();
     if(n == 0) {
@@ -43,6 +48,9 @@ const BigInteger& BigInteger::operator=(long long n) {
     }
     if(n >= 0) {
         sign = true;
+    } else if(n == LONG_LONG_MIN) {
+        *this = "-9223372036854775808";
+        return *this;
     } else if(n < 0) {
         sign = false;
         n = -n;
@@ -74,7 +82,7 @@ const BigInteger& BigInteger::operator=(const char *n) {
             ten = 1;
         }
     }
-    if(len % WIDTH != 0) {
+    if((len - stop) % WIDTH != 0) {
         num.push_back(tmp);
     }
     setLength();
@@ -181,7 +189,7 @@ BigInteger operator-(const BigInteger &a, const BigInteger &b) {
         return a + (-b);
     }
     if(!a.sign) {
-        return -((-a) + (-b));
+        return -((-a) + b);
     }
     if(a < b) {
         return -(b - a);
@@ -302,7 +310,7 @@ BigInteger operator%(const BigInteger &a, const BigInteger &b) {
 }
 
 const BigInteger& BigInteger::operator%=(const BigInteger &n) {
-    *this = *this / n * n;
+    *this = *this - *this / n * n;
     return *this;
 }
 
@@ -312,13 +320,12 @@ bool operator<(const BigInteger &a, const BigInteger &b) {
     } else if(!a.sign && b.sign) {
         return true;
     } else if(a.sign && b.sign) {
-        size_t lena = a.num.size();
-        size_t lenb = b.num.size();
-        if(lena < lenb) {
+        if(a.length < b.length) {
             return true;
-        } else if(lena > lenb) {
+        } else if(a.length > b.length) {
             return false;
         } else {
+            size_t lena = a.num.size();
             for(int i = lena - 1; i >= 0; --i) {
                 if(a.num[i] < b.num[i]) {
                     return true;
@@ -368,7 +375,7 @@ bool BigInteger::operator!() {
 ostream& operator<<(ostream &out, const BigInteger &n) {
     size_t len = n.num.size();
     if(!n.sign) {
-        cout << '-';
+        out << '-';
     }
     out << n.num.back();
     for(int i = len - 2; i >= 0; --i) {
@@ -380,6 +387,19 @@ ostream& operator<<(ostream &out, const BigInteger &n) {
 istream& operator>>(istream &in, BigInteger &n) {
     string str;
     in >> str;
+    size_t len = str.length();
+    size_t i, start = 0;
+    if(str[0] == '-') {
+        start = 1;
+    }
+    if(str[start] == '\0') {
+        return in;
+    }
+    for(i = start; i < len; ++i) {
+        if(str[i] < '0' || str[i] > '9') {
+            return in;
+        }
+    }
     n = str.c_str();
     return in;
 }
