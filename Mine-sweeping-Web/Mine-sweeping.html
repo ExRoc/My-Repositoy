@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Mine-Sweeping </title>
+        <meta charset="utf-8" />
+        <script type="text/javascript" src="jquery.js"></script>
+        <link rel="stylesheet" type="text/css" href="Mine-sweeping.css" >
+        <script type="text/javascript" src="Mine-sweeping.js"></script>
+    </head>
+    <body>
+        <div id="start" class="absolute">
+            <img id="start_background" src="image/start_background.jpg" alt="start_background"/>
+            <img id="statistics" class="menu absolute" src="image/statistics.gif" alt="statistics" />
+            <img id="option" class="menu absolute" src="image/option.gif" alt="option" />
+            <a href="https://jingyan.baidu.com/article/7f766daf9231e84101e1d03d.html" target="_blank">
+                <img id="help" class="menu absolute" src="image/help.gif" alt="help" />
+            </a>
+            <label id="new_game" class="menu absolute">
+                <img class="menu" src="image/newgame.gif" alt="new game" />
+            </label>
+            <label id="statistics_data" class="menu absolute"></label>
+            <label id="option_data" class="absolute">
+                <label class="menu">
+                    <input type="radio" id="easy" name="difficulty" value="easy" checked="checked" /> 初级
+                </label>
+                <label class="menu">
+                    <input type="radio" id="normal" name="difficulty" value="normal" /> 中级
+                </label>
+                <label class="menu">
+                    <input type="radio" id="hard" name="difficulty" value="hard" /> 高级
+                </label>
+            </label>
+            <div id="submit_record" class="absolute">
+                <label id="hero_message"></label>
+                <input class="absolute" type="text" maxlength="8" id="hero_name" placeholder="英雄留名" />
+                <img id="submit" class="menu absolute" src="image/submit.gif" alt="submit" />
+            </div>
+            <div id="success" class="absolute">
+                <label id="success_message"></label>
+                <img id="confirm" class="menu absolute" src="image/confirm.gif" alt="confirm" />
+            </div>
+        </div>
+        <div id="game_interface" class="absolute">
+            <label id="minefield" class="absolute"></label>
+            <label id="clock" class="absolute"></label>
+            <label id="mine_cnt" class="absolute"></label>
+            <label id="back" class="absolute"></label>
+            <img id="game_background" class="absolute" src="image/game_background.jpg" alt="game_background" />
+        </div>
+    </body>
+</html>
