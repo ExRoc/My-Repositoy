@@ -1,0 +1,218 @@
+@font-face {
+    font-family: '华康娃娃体简W5';
+    src: url('Fonts/华康娃娃体简W5.ttc') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    position: relative;
+    font-family: "华康娃娃体简W5";
+    font-size: 100%;
+    background-color: rgb(249,249,249);
+}
+
+.absolute {
+    position: absolute;
+}
+
+#start {
+    text-align: center;
+}
+
+#start_background {
+    z-index: 1;
+}
+
+#statistics {
+    top: 75%;
+    left: 25%;
+}
+
+#option {
+    top: 75%;
+    left: 45%;
+}
+
+#help {
+    top: 75%;
+    left: 65%;
+}
+
+#new_game {
+    top: 43%;
+    left: 42%;
+}
+
+#statistics_data {
+    opacity: 0.0;
+    font-size: 2.0em;
+    top: 40%;
+    left: 38%;
+}
+
+#option_data {
+    opacity: 0.0;
+    font-size: 2.0em;
+    top: 46%;
+    left: 36%;
+}
+
+#submit_record {
+    opacity: 0.0;
+    top: 260px;
+    left: 500px;
+}
+
+#hero_message {
+    font-size: 1.5em;
+}
+
+#hero_name {
+    height: 25px;
+    left: 90px;
+    top: 40px;
+}
+
+#submit {
+    width: 90px;
+    left: 90px;
+    top: 80px;
+}
+
+#success {
+    opacity: 0.0;
+    top: 270px;
+    left: 500px;
+}
+
+#success_message {
+    font-size: 1.5em;
+}
+
+#confirm {
+    width: 90px;
+    left: 90px;
+    top: 60px;
+}
+
+.menu {
+    z-index: 2;
+}
+
+.menu:hover {
+    opacity: 0.6;
+}
+
+#game_interface {
+    opacity: 0.0;
+    z-index: 0;
+}
+
+#game_background {
+    z-index: -1;
+}
+
+.word {
+    color: white;
+}
+
+.pack {
+    position: absolute;
+}
+
+.button {
+    background: url("image/button.png");
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+}
+
+.boom {
+    background: url('image/boom.png');
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+}
+
+.doubt {
+    background: url('image/doubt.png');
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+}
+
+.failed {
+    background: url('image/failed.png');
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+}
+
+.failflag {
+    background: url('image/failflag.png');
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+}
+
+.flag {
+    background: url('image/flag.png');
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+}
+
+.none {
+    background: url('image/none.png');
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+}
+
+.prompt {
+    background: url('image/prompt.png');
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+}
+
+.one {
+    background: url('image/one.png');
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+}
+
+.two {
+    background: url('image/two.png');
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+}
+
+.three {
+    background: url('image/three.png');
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+}
+
+.four {
+    background: url('image/four.png');
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+}
+
+.five {
+    background: url('image/five.png');
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+}
+
+.six {
+    background: url('image/six.png');
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+}
+
+.seven {
+    background: url('image/seven.png');
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+}
+
+.eight {
+    background: url('image/eight.png');
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+}
