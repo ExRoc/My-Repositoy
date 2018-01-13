@@ -1,0 +1,117 @@
+#Avatar {
+    position: absolute;
+    z-index: 2;
+}
+
+.background {
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+}
+
+#background {
+    top: 62px;
+    position: absolute;
+    width: 1350px;
+    height: 400px;
+    overflow: hidden;
+}
+
+#circle {
+    z-index: 2;
+    top: 360px;
+    position: absolute;
+    cursor: pointer;
+}
+
+#circle_1 {
+    position: absolute;
+    left: 577px;
+}
+
+#circle_2 {
+    position: absolute;
+    left: 659px;
+}
+
+#circle_3 {
+    position: absolute;
+    left: 742px;
+}
+
+#Webpage {
+    position: absolute;
+    z-index: 2;
+}
+
+#zuoyebuluo {
+    position: absolute;
+    top: 459px;
+    left: 107px;
+    height: 108px;
+    width: 258px;
+    overflow: hidden;
+}
+
+#zuoyebuluo_back {
+    position: absolute;
+}
+
+#zuoyebuluo_front {
+    position: absolute;
+    top: 108px;
+}
+
+#csdn {
+    position: absolute;
+    top: 459px;
+    left: 399px;
+    height: 108px;
+    width: 258px;
+    overflow: hidden;
+}
+
+#csdn_back {
+    position: absolute;
+}
+
+#csdn_front {
+    position: absolute;
+    top: 108px;
+}
+
+#vjudge {
+    position: absolute;
+    top: 459px;
+    left: 692px;
+    height: 108px;
+    width: 258px;
+    overflow: hidden;
+}
+
+#vjudge_back {
+    position: absolute;
+}
+
+#vjudge_front {
+    position: absolute;
+    top: 108px;
+}
+
+#codeforces {
+    position: absolute;
+    top: 459px;
+    left: 985px;
+    height: 108px;
+    width: 258px;
+    overflow: hidden;
+}
+
+#codeforces_back {
+    position: absolute;
+}
+
+#codeforces_front {
+    position: absolute;
+    top: 108px;
+}
