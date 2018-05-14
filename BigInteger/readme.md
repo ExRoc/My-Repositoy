@@ -36,7 +36,7 @@
 |T operator*(const T&, const T&)|1.938|2.121|
 |T operator/(const T&, const T&)|8.698|19.616|
 |T operator%(const T&, const T&)|11.038|20.656|
-</center>
+
 　　检验结果准确性与运行时间代码，在 `test.cpp` 文件内，可将三个文件添加到工程中运行检测。默认将 `BigInteger` 类的计算时间与 int 类型数据计算时间比较，若要与 `long long` 类型计算时间进行比较，可将程序第 11 行<br/>
 
 ```C++
