@@ -20,9 +20,10 @@
 |size_t size() const|返回 BigInteger 对象的位数|
 |BigInteger e(size_t n) const|返回 BigInteger 对象 ×$10^n$ 后的值|
 |BigInteger abs() const|返回 BigInteger 对象的绝对值| 
+
 　　更多函数请使用者在已有代码基础上自行编写。
 
-计算耗时比(`$\frac{t_{BigInteger}}{t_{int/long long}}$`)
+计算耗时比(<img src="https://github.com/Dmaxiya/My-Repositoy/blob/master/BigInteger/formula.png?raw=true" width = "60" />)
 ---
     
 |运算符|int|long long|
